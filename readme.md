@@ -2,6 +2,8 @@
 - <artifactId>spring-boot-starter-web</artifactId>
 - <artifactId>json-path</artifactId>
 - <artifactId>lombok</artifactId>
+- <artifactId>spring-boot-starter-data-jpa</artifactId>
+- <artifactId>mysql-connector-java</artifactId>
 
 ## Important Plugins
 
