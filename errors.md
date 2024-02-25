@@ -31,3 +31,13 @@ For MySQL 8.x:
 ```properties
 spring.jpa.properties.hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
 ```
+
+#### 0.0.2-Error
+```Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make protected final java.lang.Class java.lang.ClassLoader.defineClass(java.lang.String,byte[],int,int,java.security.ProtectionDomain) throws java.lang.ClassFormatError accessible: module java.base does not "opens java.lang" to unnamed module @4b553d26```
+
+#### Resolution
+
+To resolve this issue, you can try the following solutions: <br>
+1.Downgrade to Java 8: If you can downgrade your Java version, using Java 8 will likely resolve the issue since JPMS was not introduced until Java 9.
+2.Upgrade Spring Boot and Spring: Upgrade to a newer version of Spring Boot (2.1.x or later) and Spring (5.1.x or later) that better supports Java 9+ modules.
+
