@@ -8,3 +8,7 @@
 7. "aws ec2 create-key-pair --key-name my-key-pair --query 'KeyMaterial' --output text > my-key-pair.pem --profile default"
 8. "aws cloudformation update-stack --stack-name my-spring-app --template-body file://spring-boot-stack.yml --capabilities CAPABILITY_NAMED_IAM  --profile default"
 9. "aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId, PublicIpAddress]' --output table" to get the public ip of running ec2 instance for doing ssh.
+10. To create new Key-pair "aws ec2 create-key-pair --key-name new-key-02-25 --query 'KeyMaterial' --output text > new-key-02-25.pem"
+11. To change permission of key-pair "chmod 400 new-key-02-25.pem"
+12. To check how many key-pairs are present "aws ec2 describe-key-pairs --query 'KeyPairs[*].KeyName'"
+13. ssh into ec2 "ssh -i new-key-02-25.pem ec2-user@<public_ip>"
