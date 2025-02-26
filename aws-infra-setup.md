@@ -7,3 +7,4 @@
 6. "aws cloudformation create-stack --stack-name my-spring-app --template-body file://spring-boot-stack.yml --capabilities CAPABILITY_NAMED_IAM --profile default"
 7. "aws ec2 create-key-pair --key-name my-key-pair --query 'KeyMaterial' --output text > my-key-pair.pem --profile default"
 8. "aws cloudformation update-stack --stack-name my-spring-app --template-body file://spring-boot-stack.yml --capabilities CAPABILITY_NAMED_IAM  --profile default"
+9. "aws ec2 describe-instances --query 'Reservations[*].Instances[*].[InstanceId, PublicIpAddress]' --output table" to get the public ip of running ec2 instance for doing ssh.
