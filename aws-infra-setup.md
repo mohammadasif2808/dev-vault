@@ -1,3 +1,4 @@
+![aws-infra-1](/images/infra1.jpg)
 1. install aws cli
 2. create aws access key
 3. use "aws configure" command to set access key on local
